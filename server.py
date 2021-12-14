@@ -62,7 +62,7 @@ class Server:
                                 data["username"] = username
                                 client.sendall(crypto.encrypt(json.dumps(data)).encode())
                             else:
-                                self.__mailbox[data["username"]].append(data["message"])
+                                self.__mailbox[data["username"]].append(username + " sent: " + data["message"])
                             crypto.set_password(self.__accounts[username])
 
                 else:
