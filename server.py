@@ -48,7 +48,7 @@ class Server:
         username = ""
         crypto = None
         try:
-            while True:
+            while self.__running:
                 msg = conn.recv(2046).decode()
                 if username in self.__accounts:
                     if not crypto:
