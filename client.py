@@ -57,7 +57,9 @@ class Client:
             while self.__running:
                 msg = input(self.__current_user + ": ")
                 attr = msg.split(" ", 2)
-                if attr[0] == "!user" and len(attr) > 1:
+                if msg.lower() == "!quit":
+                    self.stop()
+                elif attr[0] == "!user" and len(attr) > 1:
                     self.__current_user = attr[1]
                 elif self.__current_user:
                     self.send_message(self.__current_user, msg)
