@@ -33,6 +33,9 @@ class Server:
     def del_account(self, username):
         if username in self.__accounts:
             del self.__accounts[username]
+            
+    def get_accounts(self):
+        return self.__accounts
 
     def __listen(self, running=False):
         if not running:
