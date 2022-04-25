@@ -23,6 +23,7 @@ class Server:
 
     def stop(self):
         self.__running = False
+        self.__sock.close()
 
     def add_account(self, username, password):
         if username not in self.__accounts:
