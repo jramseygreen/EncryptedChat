@@ -5,3 +5,6 @@ Features:
 - Create and remove user accounts
 - Send messages to other users regardless of online status
 - Mailbox delivers messages which were sent while offline upon login
+
+Usage:
+- Use `!user <username>` to change who you are currently sending messages to.
