@@ -26,6 +26,9 @@ class Client:
             self.__crypto = CryptoWrapper(self.__password)
         self.__sock.sendall(json.dumps({"command": "authenticate", "username": self.__username, "password": self.__crypto.encrypt(self.__password)}).encode())
         self.__input_loop()
+        
+    def is_running(self):
+        return self.__running
 
     def stop(self):
         self.__running = False
