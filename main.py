@@ -15,6 +15,10 @@ def add_user():
 
 def del_user():
     global server
+    print("Current accounts:")
+    print("--------------")
+    for account in server.get_accounts():
+        print("- " + account)
     server.del_account(input("Username: "))
 
 def create_chat_server():
