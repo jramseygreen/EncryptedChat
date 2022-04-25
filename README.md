@@ -7,4 +7,5 @@ Features:
 - Mailbox delivers messages which were sent while offline upon login
 
 Usage:
+- install [pycryptodome](https://pypi.org/project/pycryptodome/) with `pip install pycryptodome`
 - Use `!user <username>` to change who you are currently sending messages to.
